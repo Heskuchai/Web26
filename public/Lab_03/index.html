@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Лабораторна робота № 3</title>
+</head>
+<body>
+<h1>Файли та файлова структура</h1>
+
+<h2>Завантаження зображення</h2>
+<form action="process.php" method="post" enctype="multipart/form-data">
+    <p><label for="image">Зображення PNG або JPEG до 2 МБ:</label></p>
+    <input type="file" id="image" name="image" accept=".png,.jpg,.jpeg" required>
+    <input type="submit" value="Завантажити">
+</form>
+
+<h2>Запис тексту</h2>
+<form action="text.php" method="post">
+    <p><label for="message">Текст для запису в log.txt:</label></p>
+    <textarea id="message" name="message" rows="4" cols="36" maxlength="1000" required></textarea>
+    <p><input type="submit" value="Записати текст"></p>
+</form>
+
+<p><a href="text.php">Відкрити журнал</a></p>
+<p><a href="list.php">Переглянути список файлів</a></p>
+</body>
+</html>
